@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="col-md-2">
+        <div ng-include="'app/views/sidebar.html'"></div>
+    </div>
+    <div class="col-md-10">
+        <legend>{{patient.first_name }} {{patient.last_name}}</legend>
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        {{ patient.gender }} 
+                    </td>
+                </tr>
+                <tr>
+                    <td>dob</td>
+                    <td>
+                        {{ patient.dob }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        {{ patient.address1 }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Postcode</td>
+                    <td>
+                        {{ patient.postcode }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   
+</div>

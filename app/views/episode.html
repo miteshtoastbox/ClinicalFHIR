@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-md-2">
+        <div ng-include="'app/views/sidebar.html'"></div>
+    </div>
+
+    <div class="col-md-10">
+    	<div class="row">
+    		<div class="col-md-12">
+    			 <legend>{{patient.first_name }} {{patient.last_name}}</legend>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-2">
+
+    			<strong>Admitted</strong>
+	    		<div class="btn-group-vertical" ng-repeat="ep in patient.episode">
+				    <a href="#/episode" ng-click="epDetails(ep)" class="btn btn-default">{{ep.admitted}}</a>
+				</div>
+			</div>
+			<div class="col-md-10">
+	    		<p class='wrap'>	
+	    			<table class="table table-striped table-bordered table-hover">
+			            <tbody>
+			                <tr>
+			                    <td>Class Code</td>
+			                    <td>
+			                        {{ ep.patient_classcode }} 
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td>Admission Type</td>
+			                    <td>
+			                        {{ ep.admissiontype }}
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td>Episode Start</td>
+			                    <td>
+			                        {{ ep.episodestart }}
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td>Episode End</td>
+			                    <td>
+			                        {{ ep.episodeend }}
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td>Expected Discharged</td>
+			                    <td>
+			                        {{ ep.expected_discharged }}
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td>Details</td>
+			                    <td>
+			                        {{ ep.expected_discharged }}
+			                    </td>
+			                </tr>
+			            </tbody>
+			        </table>
+	    		</p>
+			</div>
+    	</div>
+    </div>
+</div>
